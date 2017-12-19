@@ -22,14 +22,6 @@ namespace Desire2Learn\Valence;
  */
 class D2LAppContextFactory {
 
-	private $appId;
-	private $appKey;
-
-	/**
-	 * Set AppId
-	 */
-	public static
-
 	/**
 	 * Build a new D2L LMS application security context.
 	 *
