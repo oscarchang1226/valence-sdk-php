@@ -28,4 +28,8 @@ class D2LConstants {
 	const URI_SECURE_SCHEME = "https";
 	const URI_UNSECURE_SCHEME = "http";
 
+	const URI_BAS_VERSION = '1.0';
+	const URI_LE_VERSION = '1.26';
+	const URI_LP_VERSION = '1.20';
+
 }

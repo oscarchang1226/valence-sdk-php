@@ -49,7 +49,7 @@ interface D2LAppContextInterface {
 	 * @return string URL that the client application should pass to a web control or
 	 * browser to let the user authenticate with the back-end service.
 	 */
-	public function createUrlForAuthentication($host, $port, $resultUri, $encryptOperations = true);
+	public function createUrlForAuthentication( $host, $port, $resultUri, $encryptOperations = true );
 
 	/**
 	 * Wrapper for createUrlForAuthentication that takes a D2LHostSpec structure.
@@ -61,7 +61,7 @@ interface D2LAppContextInterface {
 	 * @return string URL that the client application should pass to a web control or
 	 * browser to let the user authenticate with the back-end service.
 	 */
-	public function createUrlForAuthenticationFromHostSpec($hostSpec, $resultUri);
+	public function createUrlForAuthenticationFromHostSpec( $hostSpec, $resultUri );
 
 	/**
 	 * Build a new authenticated-user context the client application can use to
@@ -99,7 +99,7 @@ interface D2LAppContextInterface {
 	 * @return ID2LUserContext User context object that implements ID2LUserContext, usable for
 	 * creating properly decorated API requests.
 	 */
-	public function createUserContext($hostName, $port, $encryptOperations, $userId = null, $userKey = null, $callbackUri = null);
+	public function createUserContext( $hostName, $port, $encryptOperations, $userId = null, $userKey = null, $callbackUri = null );
 
 	/**
 	 * Wrapper for createUserContext that takes a D2LHostSpec structure.
@@ -112,4 +112,5 @@ interface D2LAppContextInterface {
 	 * @return ID2LUserContext User conext object that implements ID2LUserContext, usable for
 	 * creating properly decorated API requests.
 	 */
-	public function createUserContextFromHostSpec($hostSpec, $userId = null, $userKey = null, $callbackUri = null);
+	public function createUserContextFromHostSpec( $hostSpec, $userId = null, $userKey = null, $callbackUri = null );
+}
