@@ -15,13 +15,28 @@
  * the License.
  */
 
-if (isset($_GET['x_a']) && isset($_GET['x_b'])) {
-	session_start();
-	$_SESSION['userId'] = $_GET['x_a'];
-	$_SESSION['userKey']= $_GET['x_b'];
-	session_write_close();
-	header("Location: index.php");
-} else {
-    throw new Exception('If you are seeing this page you probably navigated here directly. ' .
-                        'The LMS redirects the user to this page on succesful login, passing the user credentials in the x_a, x_b query parameters.');
+namespace Desire2Learn\Valence;
+
+/** Class to encapsulate the useful state for a calling user context. */
+class UserOpSecurityParameters {
+
+	public $userId;
+	public $userKey;
+	public $appId;
+	public $appKey;
+	public $hostName;
+	public $port;
+	public $encryptOperations;
+
+	public function __construct ($userId, $userKey, $appId, $appKey, $hostName,
+		$port, $encryptOperations) {
+		$this->userId = $userId;
+		$this->userKey = $userKey;
+		$this->appId = $appId;
+		$this->appKey = $appKey;
+		$this->hostName = $hostName;
+		$this->port = $port;
+		$this->encryptOperations = $encryptOperations;
+	}
+
 }
