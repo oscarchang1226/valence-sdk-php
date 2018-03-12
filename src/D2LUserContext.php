@@ -133,6 +133,8 @@ class D2LUserContext implements D2LUserContextInterface {
 		} else {
 			switch ($httpCode) {
 				case "200":
+				case "201":
+				case "202":
 					return D2LUserContext::RESULT_OKAY;
 					break;
 				case "401":
