@@ -102,7 +102,15 @@ class D2LUserContext implements D2LUserContextInterface {
 		$this->_serverSkewSeconds = $seconds;
 	}
 
-	/* Implements ID2LUserContext.CreateAuthenticatedUri(path,httpMethod) */
+	public function createUnauthenticatedUri($path, $httpMethod)
+    {
+        $parsed_Url = parse_url ($path);
+        $uriScheme = $this->GetUriScheme();
+        $queryString = $this->getQueryString($parsed_Url['path'], $httpMethod);
+        return $uriScheme . '://' . $this->_hostName . ':' . $this->_port . $parsed_Url ['path'];
+    }
+
+    /* Implements ID2LUserContext.CreateAuthenticatedUri(path,httpMethod) */
 	public function createAuthenticatedUri($path, $httpMethod) {
 		$parsed_Url = parse_url ($path);
 		$uriScheme = $this->GetUriScheme();

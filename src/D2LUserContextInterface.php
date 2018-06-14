@@ -37,6 +37,8 @@ interface D2LUserContextInterface {
 	/** Set the currently known time-skew between the local and back-end service clocks. */
 	public function setServerSkewSeconds( $seconds );
 
+	/** Create unauthenticated URI */
+	public function createUnauthenticatedUri ($path, $httpMethod);
 
 	/**
 	 * Retreive an appropriately decorated URI for invoking a REST route on the
