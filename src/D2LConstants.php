@@ -29,8 +29,9 @@ class D2LConstants {
 	const URI_UNSECURE_SCHEME = "http";
 
 	const URI_BAS_VERSION = '1.0';
-	const URI_LE_VERSION = '1.26';
-	const URI_LP_VERSION = '1.20';
+	const URI_LE_VERSION = '1.35';
+	const URI_LP_VERSION = '1.22';
 	const URI_LR_VERSION = '1.2';
+	const URI_EP_VERSION = '2.4';
 
 }
